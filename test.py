@@ -5,7 +5,7 @@ from googleapiclient.discovery import build
 youtube = build('youtube', 'v3', developerKey=os.getenv('YOUTUBE_API_KEY'))
 
 # Use the client to retrieve video details
-video_id = 'VIDEO_ID'
+video_id = 'USRokXSLT0s'
 video_response = youtube.videos().list(
     part='snippet',
     id=video_id

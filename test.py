@@ -22,7 +22,8 @@ if not creds or not creds.valid:
         token.write(creds.to_json())
 
 # Create a YouTube API client
-youtube = build('youtube', 'v3', developerKey=os.getenv('YOUTUBE_API_KEY'))
+# youtube = build('youtube', 'v3', developerKey=os.getenv('YOUTUBE_API_KEY'))
+youtube = build('youtube', 'v3', credentials=creds)
 
 # Use the client to retrieve video details
 # video_id = 'USRokXSLT0s'
